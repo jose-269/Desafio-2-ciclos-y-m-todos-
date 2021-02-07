@@ -8,6 +8,7 @@ const botton = document.getElementById("button").addEventListener("click", valid
     let eMail = document.getElementById("mail").value;
     let fecha = document.getElementById("date").value;
     let specialities = document.getElementById("specialities");
+    let v_error = "0";
     const hora = document.getElementById("hora")
     
     
@@ -17,6 +18,7 @@ const validarRut = () => {
     // alert(rut.match(patronRut));
     if (!(patronRut.test(rut) )) {
         alert("Debe ingresar un rut válido")
+        v_error = "1";
         return false
     }
     
@@ -28,6 +30,7 @@ const validarNombre = () => {
 
     if (!patronNombre.test(nombre) || nombre == null || /[0-9]/gim.test(nombre)){
         alert("El campo nombre debe ser solo letras")
+        v_error = "1";
         return false
     }
     
@@ -39,6 +42,7 @@ const validarApellidos = () => {
 
     if (!patronApellido.test(apellidos) || /[0-9]/gim.test(apellidos)){
         alert("El campo apellido debe ser válido")
+        v_error = "1";
         return false
     }
 }
@@ -49,6 +53,7 @@ const validarEdad = () => {
 
     if(!patronEdad.test(edad) || edad == null) {
         alert("Debe ingresar su edad")
+        v_error = "1";
     return false  
     }
 }
@@ -59,6 +64,7 @@ const validarMail = () => {
 
     if (!(patronMail.test(eMail))) {
         alert("Debe ingresar un mail válido");
+        v_error = "1";
         return false
     }
 }
@@ -75,7 +81,8 @@ const validarFecha = () => {
     const patronFecha = /^\d{2}\/\d{2}\/\d{4}$/gim;
 
     if (!(patronFecha.test(fecha))) {
-        alert("La fecha ingresada no es válida")
+        alert("La fecha ingresada no es válida");
+        v_error = "1";
         return false
     }
 }
@@ -87,21 +94,21 @@ const selectHora = () => {
 }
 selectHora()
 
+
 const msjeFinal = () => {
 
+
+    if (v_error == "0"){
     document.getElementById("mensaje").innerHTML = `${"Estimado(a)"} ${nombre} ${apellidos}, 
-        ${" su hora para"} ${specialities.value} ${"ha sido reservada para el día"} ${fecha}
-        ${"a las,"} ${hora.value}. ${"Además, se le envió un mensaje a su correo"} ${eMail}
-        ${"con el detalle de su cita"} <br> ${"Gracias por preferirnos."}`;
-        return false
-    
-    }
+    ${" su hora para"} ${specialities.value} ${"ha sido reservada para el día"} ${fecha}
+    ${"a las,"} ${hora.value}. ${"Además, se le envió un mensaje a su correo"} ${eMail}
+    ${"con el detalle de su cita"} <br> ${"Gracias por preferirnos."}`;
+    return false
+} 
+}
 
-    msjeFinal()
-
-
+msjeFinal()
 return false
-
 
 })
 
