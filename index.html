@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Reserva de horas centro médico</title>
+    <meta charset="UTF-8">
+    <meta name="author" content="Jose Martínez">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Google Fonts Passion One-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One&display=swap" 
+    rel="stylesheet">
+    <!--Google Fonts Sarabun-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun&display=swap" 
+    rel="stylesheet">
+    <!--Font Aweosme-->
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" 
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" 
+    crossorigin="anonymous"/>
+    <!--My style-->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav class="nav">
+        <i class="fas fa-plus logo"></i>
+        <h1 class="nav__title">CENTRO MÉDICO - ÑUÑOA</h1>
+    </nav> 
+    <div class="main">
+        
+        <form action="" class="main__form" onsubmit="return validar()">
+            <div class="main__title">
+                <h2 class="title">Formulario de Registro</h2>
+            </div>
+            <input id="rut" class="main__form__inputs" type="texto" placeholder="RUT xxxxxxxx-x">
+            <input id="name" class="main__form__inputs" type="text" placeholder="Nombres"> 
+            <input id="last-name" class="main__form__inputs" type="text" placeholder="Apellidos">
+            <input id="age" class="main__form__inputs" type="text" placeholder="Edad">
+            <input id="mail" class="main__form__inputs" type="text" placeholder="Email">
+            <div class="especialidad">
+            <label  for "special" class="etiqueta">Especialidades</label>
+                <select name="special" id="specialities" class="select">
+                    <option value="Medicina general">Medicina general</option>
+                    <option value="Imágenes">Imágenes</option>
+                    <option value="Kinesiología">Kinesiología</option>
+                </select>
+            </div>
+            <input id="date" class="main__form__inputs" type="texto" placeholder="Fecha dd/mm/aaaa">
+            <div class="especialidad">
+                <label  for "special" class="etiqueta">Hora</label>
+                    <select name="special" id="hora" class="select">
+                        <option value="09:00">09:00 AM</option>
+                        <option value="09:30">09:30 AM</option>
+                        <option value="10:00">10:00 AM</option>
+                        <option value="10:30">10:30 AM</option>
+                        <option value="11:00">11:00 AM</option>
+                        <option value="11:30">11:30 AM</option>
+                        <option value="12:00">12:00 PM</option>
+                        <option value="12:30">12:30 PM</option>
+                        <option value="13:00">13:00 PM</option>
+                        <option value="13:30">13:30 PM</option>
+                        <option value="14:00">14:00 PM</option>
+                        <option value=14:30">14:30 PM</option>
+                        <option value="15:00">15:00 PM</option>
+                        <option value="15:30">15:30 PM</option>
+                        <option value="16:00">16:00 PM</option>
+                        <option value="16:30">16:30 PM</option>
+                        <option value="17:30">17:30 PM</option>
+                        <option value="18:00">18:00 PM</option>
+                        <option value="18:30">18:30 PM</option>
+                        
+                    </select>
+                </div>
+            <button id="button" type="button" class="main__form__button">Reservar</button>
+        </form>
+    </div>
+    <div class="validatemsje">
+        <h3 id="mensaje" class="validatemsje__title"></h3>
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

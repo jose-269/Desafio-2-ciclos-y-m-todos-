@@ -1,0 +1,123 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: "Passion One", cursive;
+  font-weight: 400;
+  font-size: 55px;
+  letter-spacing: 4px;
+}
+
+h2 {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.nav {
+  background-color: #15d897;
+}
+.nav__title {
+  color: #fff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+.nav i {
+  font-size: 55px;
+  padding-left: 3.5rem;
+  color: #fff;
+}
+.nav__title {
+  padding: 1.3rem 0 1.3rem 2rem;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 63.5vh;
+  justify-content: center;
+  align-items: center;
+}
+.main__title {
+  background-color: #15d897;
+  text-shadow: 2px 2px 6px #1b1b1b;
+  text-align: center;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.main__form {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  width: 28%;
+  background-color: #15d897;
+}
+.main__form__inputs {
+  padding-left: 0.5rem;
+  line-height: 30px;
+  vertical-align: middle;
+}
+
+.especialidad {
+  display: flex;
+}
+
+.etiqueta {
+  padding-left: 0.5rem;
+  line-height: 1.875rem;
+  border-left: 1px solid grey;
+  background-color: #fff;
+  font-family: "Sarabun", sans-serif;
+  color: grey;
+  width: 50%;
+}
+
+.select {
+  height: 2rem;
+  width: 50%;
+}
+
+.validatemsje {
+  padding: 0 3.5rem;
+  line-height: 30px;
+  text-align: center;
+  font-family: "Sarabun", sans-serif;
+}
+
+.main__title {
+  color: #fff;
+  font-family: "Sarabun", sans-serif;
+}
+.main__form {
+  overflow: hidden;
+  border-radius: 20px;
+}
+.main__form__input {
+  font-family: "Sarabun", sans-serif;
+  font-size: 8.5rem;
+}
+.main__form__button {
+  font-family: "Sarabun", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  background-color: #15d897;
+  padding-bottom: 0.4rem;
+  color: #fff;
+  text-shadow: 2px 2px 6px #1b1b1b;
+  border: none;
+  height: 2.5rem;
+}
+
+/*# sourceMappingURL=style.css.map */
